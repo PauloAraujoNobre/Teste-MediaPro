@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "75c57a4c-818f-4d5b-a907-76f83afd0077",
+		"name": "MediaPro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Scorebat",
+			"item": [
+				{
+					"name": "Request API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.scorebat.com/video-api/v3/",
+							"protocol": "https",
+							"host": [
+								"www",
+								"scorebat",
+								"com"
+							],
+							"path": [
+								"video-api",
+								"v3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MicroService",
+			"item": [
+				{
+					"name": "List All Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/v1/foot/list-all-data",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"v1",
+								"foot",
+								"list-all-data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/v1/foot/list",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"v1",
+								"foot",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hislight",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/v1/foot/highlight/:competition",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"v1",
+								"foot",
+								"highlight",
+								":competition"
+							],
+							"variable": [
+								{
+									"key": "competition",
+									"value": "FRANCE: Ligue 1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HislightExtends",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/v1/foot/highlight/:competition/:highlightIndex",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"v1",
+								"foot",
+								"highlight",
+								":competition",
+								":highlightIndex"
+							],
+							"variable": [
+								{
+									"key": "competition",
+									"value": "FRANCE: Ligue 1"
+								},
+								{
+									"key": "highlightIndex",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "localhost:8080"
+		}
+	]
+}
